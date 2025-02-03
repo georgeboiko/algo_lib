@@ -20,7 +20,7 @@ class Hash
                 pows[i + 1] = pows[i] * p;
             }
         }
-        int getHash(int l, int r) {
+        long long getHash(int l, int r) {
             return h[r+1] - h[l] * pows[r - l + 1];
         }
 };

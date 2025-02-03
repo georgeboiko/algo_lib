@@ -33,7 +33,7 @@ std::vector<edge> bridges(graph g){
     std::vector<std::vector<std::pair<int, int>>> matrix = g.getMatrix();
     std::vector<int> colors(matrix.size()), h(matrix.size()), d(matrix.size());
     for (auto& elem : edges){
-        auto vertexes = elem.getVertexes();
+        auto vertexes = elem.get_vertexes();
         mp[{std::min(vertexes.first, vertexes.second), std::max(vertexes.first, vertexes.second)}].push_back(elem);
     }
     for (int i = 0; i < matrix.size(); ++i){

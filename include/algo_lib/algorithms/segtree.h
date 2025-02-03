@@ -27,6 +27,8 @@ class segtree
 
         const node NEUTRAL = node(0, -INF, INF, INF);
 
+        int last_type;
+
         node unite(const node& a, const node& b){
             return node(
                 a.sum + b.sum,
@@ -58,9 +60,9 @@ class segtree
             tree[x].psh = INF;
         }
 
-    public:
-        int last_type;
         void build(int x, int lx, int rx);
+
+    public:
         void set(int x, int lx, int rx, int l, int r, int val);
         void add(int x, int lx, int rx, int l, int r, int val);
         node ask(int x, int lx, int rx, int l, int r);

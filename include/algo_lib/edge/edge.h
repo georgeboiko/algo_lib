@@ -41,18 +41,18 @@ class edge
             return (this->weight > edge.weight);
         };
 
-        void setVertexes(int vertex1, int vertex2){
+        void set_vertexes(int vertex1, int vertex2){
             this->vertex1 = vertex1;
             this->vertex2 = vertex2;
         };
-        std::pair<int, int> getVertexes(){
+        std::pair<int, int> get_vertexes(){
             return {this->vertex1, this->vertex2};
         };
 
-        void setWeight(int weight){
+        void set_weight(int weight){
             this->weight = weight;
         };
-        int getWeight(){
+        int get_weight(){
             return this->weight;
         };
 
